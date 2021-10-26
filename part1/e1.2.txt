@@ -1,0 +1,86 @@
+Script started on 2021-10-26 14:52:20-07:00 [TERM="xterm-256color" TTY="/dev/pts/9" COLUMNS="170" LINES="47"]
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker ps -as
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS                       PORTS     NAMES                  SIZE
+d27925f120ec   nginx             "/docker-entrypoint.…"   3 minutes ago   Exited (0) 2 minutes ago               boring_banzai          1.09kB (virtual 133MB)
+225f32e81f0c   nginx             "/docker-entrypoint.…"   3 minutes ago   Exited (0) 2 minutes ago               angry_yalow            1.09kB (virtual 133MB)
+74ee169b8574   nginx             "/docker-entrypoint.…"   3 minutes ago   Exited (0) 50 seconds ago              objective_leavitt      1.09kB (virtual 133MB)
+3ab4ad5ff26e   nginx             "/docker-entrypoint.…"   5 minutes ago   Exited (127) 5 minutes ago             suspicious_goldstine   0B (virtual 133MB)
+1a7d442321c1   nginx             "/docker-entrypoint.…"   6 minutes ago   Exited (127) 6 minutes ago             awesome_roentgen       0B (virtual 133MB)
+b880f04fd852   postgis/postgis   "docker-entrypoint.s…"   20 hours ago    Exited (0) 4 minutes ago               postgres_test          0B (virtual 567MB)
+d40778b2c919   postgis/postgis   "docker-entrypoint.s…"   25 hours ago    Exited (0) 4 minutes ago               postgres               0B (virtual 567MB)
+1162ac07e0fb   carsharing_app    "docker-entrypoint.s…"   25 hours ago    Exited (1) 4 minutes ago               carsharing_app         4.29kB (virtual 214MB)
+e63388bdd433   nginx:1.20.1      "/docker-entrypoint.…"   26 hours ago    Exited (0) 4 minutes ago               reverse-proxy          1.09kB (virtual 133MB)
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker image
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker images
+REPOSITORY        TAG       IMAGE ID       CREATED        SIZE
+carsharing_app    latest    08018ca36d38   25 hours ago   214MB
+postgis/postgis   latest    4c56083d1adb   40 hours ago   567MB
+nginx             1.20.1    c8d03f6b8b91   2 weeks ago    133MB
+nginx             latest    87a94228f133   2 weeks ago    133MB
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker image rm nginx:lats[Kest
+Error response from daemon: conflict: unable to remove repository reference "nginx:latest" (must force) - container 3ab4ad5ff26e is using its referenced image 87a94228f133
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container stop objec[K[K[K[K[K[K[K[K[K[Kls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker o[Kcontainer rm boring_banzai angry_yalow objective_leavitt 
+boring_banzai
+angry_yalow
+objective_leavitt
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker image rm nginx:latest
+Error response from daemon: conflict: unable to remove repository reference "nginx:latest" (must force) - container 1a7d442321c1 is using its referenced image 87a94228f133
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container rm awesome_roentgen 
+awesome_roentgen
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker image rm nginx: l[K[Klatest
+Error response from daemon: conflict: unable to remove repository reference "nginx:latest" (must force) - container 3ab4ad5ff26e is using its referenced image 87a94228f133
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container rm suspicious_goldstine 
+suspicious_goldstine
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ g[Kdocker image rj[Km nginx:latest
+Untagged: nginx:latest
+Untagged: nginx@sha256:644a70516a26004c97d0d85c7fe1d0c3a67ea8ab7ddf4aff193d9f301670cf36
+Deleted: sha256:87a94228f133e2da99cb16d653cd1373c5b4e8689956386c1c12b60a20421a02
+Deleted: sha256:55b6972054b24c53054322a52748324df5797eefbb6dc374e41522a91d532dd5
+Deleted: sha256:6b88aa6f4485486bfc779cccfbe4a7a47a502a7cff2cd70be89c59dcd0db12a8
+Deleted: sha256:472c64059965c7b6b1b534ba07374c1d034b17c99acb3cf4534fe78abed41101
+Deleted: sha256:788a5cf1e4599312b5923694f53e556ba0e2eb4a6bbb51958e0ec2b510345a49
+Deleted: sha256:410f31f9ae37c62af85e8f9575c5f4d75542be1739ac1ca5982cf461be0b13bc
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ exit
+exit
+
+Script done on 2021-10-26 14:57:37-07:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2021-10-26 14:58:41-07:00 [TERM="xterm-256color" TTY="/dev/pts/9" COLUMNS="170" LINES="47"]
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker image ls
+REPOSITORY        TAG       IMAGE ID       CREATED        SIZE
+carsharing_app    latest    08018ca36d38   25 hours ago   214MB
+postgis/postgis   latest    4c56083d1adb   41 hours ago   567MB
+nginx             1.20.1    c8d03f6b8b91   2 weeks ago    133MB
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container ls -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED        STATUS                      PORTS     NAMES
+b880f04fd852   postgis/postgis   "docker-entrypoint.s…"   20 hours ago   Exited (0) 11 minutes ago             postgres_test
+d40778b2c919   postgis/postgis   "docker-entrypoint.s…"   25 hours ago   Exited (0) 11 minutes ago             postgres
+1162ac07e0fb   carsharing_app    "docker-entrypoint.s…"   25 hours ago   Exited (1) 11 minutes ago             carsharing_app
+e63388bdd433   nginx:1.20.1      "/docker-entrypoint.…"   26 hours ago   Exited (0) 11 minutes ago             reverse-proxy
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ do[K[Kexit
+exit
+
+Script done on 2021-10-26 14:59:17-07:00 [COMMAND_EXIT_CODE="0"]

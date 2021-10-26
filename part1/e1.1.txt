@@ -1,0 +1,37 @@
+Script started on 2021-10-26 14:48:14-07:00 [TERM="xterm-256color" TTY="/dev/pts/9" COLUMNS="170" LINES="47"]
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container -d run [K[K[K[K[K[K[Krun 0[K-d nginx
+74ee169b8574dcadd1bad112f4ff239dcbebff62cb9c145bbea0c9f6de29a8c2
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container run 0d [K[K[K-d nginx
+225f32e81f0cbd69b42366bc81a27a20676139769d039adf27e13e1fa3dce34c
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container run -d nginx
+d27925f120ecf4107a8cd9119643498bf2b8eabd3ac3c38a3984a7f3a1ec7d3c
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+d27925f120ec   nginx     "/docker-entrypoint.…"   5 seconds ago    Up 4 seconds    80/tcp    boring_banzai
+225f32e81f0c   nginx     "/docker-entrypoint.…"   14 seconds ago   Up 13 seconds   80/tcp    angry_yalow
+74ee169b8574   nginx     "/docker-entrypoint.…"   26 seconds ago   Up 25 seconds   80/tcp    objective_leavitt
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container stop boring_banzai 
+boring_banzai
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker container stop angry_yalow 
+angry_yalow
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker conainer sl
+docker: 'conainer' is not a docker command.
+See 'docker --help'
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker on[K[Kcontainer ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS     NAMES
+74ee169b8574   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   80/tcp    objective_leavitt
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ docker ps -a
+CONTAINER ID   IMAGE             COMMAND                  CREATED              STATUS                       PORTS     NAMES
+d27925f120ec   nginx             "/docker-entrypoint.…"   About a minute ago   Exited (0) 37 seconds ago              boring_banzai
+225f32e81f0c   nginx             "/docker-entrypoint.…"   About a minute ago   Exited (0) 23 seconds ago              angry_yalow
+74ee169b8574   nginx             "/docker-entrypoint.…"   About a minute ago   Up About a minute            80/tcp    objective_leavitt
+3ab4ad5ff26e   nginx             "/docker-entrypoint.…"   3 minutes ago        Exited (127) 3 minutes ago             suspicious_goldstine
+1a7d442321c1   nginx             "/docker-entrypoint.…"   4 minutes ago        Exited (127) 4 minutes ago             awesome_roentgen
+b880f04fd852   postgis/postgis   "docker-entrypoint.s…"   20 hours ago         Exited (0) 2 minutes ago               postgres_test
+d40778b2c919   postgis/postgis   "docker-entrypoint.s…"   25 hours ago         Exited (0) 2 minutes ago               postgres
+1162ac07e0fb   carsharing_app    "docker-entrypoint.s…"   25 hours ago         Exited (1) 2 minutes ago               carsharing_app
+e63388bdd433   nginx:1.20.1      "/docker-entrypoint.…"   26 hours ago         Exited (0) 2 minutes ago               reverse-proxy
+]0;ubu@UX430UQ: /mnt/d/fullstackopen_all/devops_with_docker/part1[01;32mubu@UX430UQ[00m:[01;34m/mnt/d/fullstackopen_all/devops_with_docker/part1[00m$ exot[K[Kit
+exit
+
+Script done on 2021-10-26 14:51:17-07:00 [COMMAND_EXIT_CODE="0"]
