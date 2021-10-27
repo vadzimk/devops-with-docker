@@ -1,0 +1,35 @@
+ubu@UX430UQ:/mnt/d/fullstackopen_all/devops_with_docker/part1$ docker pull devopsdockeruh/simple-web-service:alpine
+alpine: Pulling from devopsdockeruh/simple-web-service
+ba3557a56b15: Pull complete
+1dace236434b: Pull complete
+4f4fb700ef54: Pull complete
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+docker.io/devopsdockeruh/simple-web-service:alpine
+ubu@UX430UQ:/mnt/d/fullstackopen_all/devops_with_docker/part1$ docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+carsharing_app                      latest    08018ca36d38   29 hours ago   214MB
+postgis/postgis                     latest    4c56083d1adb   44 hours ago   567MB
+ubuntu                              latest    ba6acccedd29   11 days ago    72.8MB
+nginx                               1.20.1    c8d03f6b8b91   2 weeks ago    133MB
+ubuntu                              18.04     5a214d77f5d7   3 weeks ago    63.1MB
+ubuntu                              bionic    5a214d77f5d7   3 weeks ago    63.1MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   7 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   7 months ago   15.7MB
+ubu@UX430UQ:/mnt/d/fullstackopen_all/devops_with_docker/part1$ docker exec -it magical_maxwell sh
+/usr/src/app # tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-10-27 01:54:33 +0000 UTC
+2021-10-27 01:54:35 +0000 UTC
+2021-10-27 01:54:37 +0000 UTC
+2021-10-27 01:54:39 +0000 UTC
+2021-10-27 01:54:41 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-10-27 01:54:43 +0000 UTC
+2021-10-27 01:54:45 +0000 UTC
+2021-10-27 01:54:47 +0000 UTC
+2021-10-27 01:54:49 +0000 UTC
+2021-10-27 01:54:51 +0000 UTC
+^C
+/usr/src/app # exit
+ubu@UX430UQ:/mnt/d/fullstackopen_all/devops_with_docker/part1$
