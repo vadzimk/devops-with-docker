@@ -1,0 +1,32 @@
+ubu@UX430UQ:/mnt/d/fullstackopen_all/devops_with_docker/part1/e1.8$ docker build -t curler .
+[+] Building 71.6s (10/10) FINISHED                                                                                 
+ => [internal] load build definition from Dockerfile                                                           0.0s
+ => => transferring dockerfile: 161B                                                                           0.0s
+ => [internal] load .dockerignore                                                                              0.0s
+ => => transferring context: 2B                                                                                0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:18.04                                                0.0s
+ => CACHED [1/5] FROM docker.io/library/ubuntu:18.04                                                           0.0s
+ => [internal] load build context                                                                              0.0s
+ => => transferring context: 30B                                                                               0.0s
+ => [2/5] RUN apt-get update                                                                                  49.0s
+ => [3/5] RUN apt-get install -y curl                                                                         21.7s
+ => [4/5] WORKDIR /usr/src/app                                                                                 0.1s 
+ => [5/5] COPY script.sh .                                                                                     0.1s 
+ => exporting to image                                                                                         0.4s 
+ => => exporting layers                                                                                        0.4s 
+ => => writing image sha256:9d114ebb86d8a7f02edbfb3b254c517bb3012432b31e37224d2444e63ee3a8d8                   0.0s 
+ => => naming to docker.io/library/curler                                                                      0.0s 
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+ubu@UX430UQ:/mnt/d/fullstackopen_all/devops_with_docker/part1/e1.8$ docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
+ubu@UX430UQ:/mnt/d/fullstackopen_all/devops_with_docker/part1/e1.8$ 
