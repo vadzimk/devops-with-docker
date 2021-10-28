@@ -1,0 +1,9 @@
+version: '3'
+services:
+  simple-web-service:
+    image: simple-web-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 8080:8080
