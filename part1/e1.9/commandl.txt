@@ -1,0 +1,1 @@
+ubu@UX430UQ:/mnt/d/fullstackopen_all/devops_with_docker/part1/e1.9$ docker run --name web-service -v $(pwd)/text.log:/usr/src/app/text.log  devopsdockeruh/simple-web-service
