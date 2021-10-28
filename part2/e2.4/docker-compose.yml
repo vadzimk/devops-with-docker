@@ -1,0 +1,34 @@
+version: '3'
+services:
+  frontend:
+    container_name: example-frontend
+    image: example-frontend
+    build:
+      context: ../../part1/e1.12/example-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+
+  backend:
+    container_name: example-backend
+    image: example-backend
+    build:
+      context: ../../part1/e1.13/example-backend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      REDIS_HOST: redis  # required by the exercise only host name
+
+  redis:
+    image: redis
+    ports:
+      - 6379:63779
+    command: [ 'redis-server', '--appendonly', 'yes' ]
+    volumes:
+      - redis_data:/data
+
+
+
+volumes:
+  redis_data:
